@@ -10,6 +10,9 @@ struct RunningWorkout {
     var time: Double
     var elevation: Double
     
+    func postWorkoutStats() {
+        print("Distance: \(distance), Time: \(time), Elevation: \(elevation)")
+    }
 }
 
 

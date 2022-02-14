@@ -20,13 +20,29 @@ print("\(benjamin.name) is \(benjamin.age) years old, is \(benjamin.height) feet
 
  - Example: If you use the initializer for meters and pass in a distance of 1600, the initializer should set `meters` to 1600 and `feet` to 5249.344.
  */
-
+struct Distance {
+    var meters: Double
+    var feet: Double
+    
+    init(feet: Double) {
+        self.feet = feet
+        meters = feet / 3.28084
+    }
+    
+    init(meters: Double) {
+        self.meters = meters
+        feet = meters * 3.28084
+    }
+}
 
 //:  Now create an instance of `Distance` called `mile`. Use the initializer for meters to set the distance to 1600. Print out the property for feet and verify that it is equal to 5249.344.
-
+var mile = Distance(meters: 1600)
+print(mile.feet)
 
 //:  Now create another instance of `Distance` and give it some other distance. Ensure that both properties are set correctly.
-
+var instance = Distance(feet: 100)
+print(instance.feet)
+print(instance.meters)
 
 /*:
 [Previous](@previous)  |  page 4 of 10  |  [Next: Exercise - Methods](@next)
