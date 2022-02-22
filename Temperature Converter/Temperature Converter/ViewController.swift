@@ -18,14 +18,24 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         let currentTemp = Double(getTemp.text!)
         if switchTemp.isOn {
-             temp = Temperature(celsius: currentTemp!)
+             temp = Temperature(tempInCelsius: currentTemp!)
         }
         else {
-             temp = Temperature(fahrenheit: currentTemp!)
+             temp = Temperature(tempInFahrenheit: currentTemp!)
         }
+        changeTemp()
     }
     @IBAction func updateTemp(_ sender: Any) {
+        changeTemp()
+    }
     
+    func changeTemp() {
+        if (!switchTemp.isOn) {
+            displayTemp.text = "\(temp)"
+        }
+        else {
+            displayTemp.text = "\(temp)"
+        }
     }
 }
 
