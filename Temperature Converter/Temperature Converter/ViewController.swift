@@ -25,16 +25,23 @@ class ViewController: UIViewController {
         }
         changeTemp()
     }
+    
     @IBAction func updateTemp(_ sender: Any) {
+        if (!switchTemp.isOn) {
+            temp!.tempInCelsius = getTemp
+        }
+        else {
+            temp!.tempInFahrenheit = getTemp
+        }
         changeTemp()
     }
     
     func changeTemp() {
         if (!switchTemp.isOn) {
-            displayTemp.text = "\(temp)"
+            displayTemp.text = "\(temp!.tempInCelsius)"
         }
         else {
-            displayTemp.text = "\(temp)"
+            displayTemp.text = "\(temp!.tempInFahrenheit)"
         }
     }
 }

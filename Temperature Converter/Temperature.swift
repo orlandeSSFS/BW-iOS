@@ -13,11 +13,11 @@ struct Temperature {
     
     init(tempInFahrenheit: Double) {
         self.tempInFahrenheit = tempInFahrenheit
-        tempInCelsius = (tempInFahrenheit - 32) * (5/9)
+        tempInCelsius = (tempInFahrenheit - 32) * (5.0/9)
     }
     
     init(tempInCelsius: Double) {
         self.tempInCelsius = tempInCelsius
-        tempInFahrenheit = (tempInCelsius * (9/5)) + 32
+        tempInFahrenheit = (tempInCelsius * (9/5.0)) + 32
     }
 }
