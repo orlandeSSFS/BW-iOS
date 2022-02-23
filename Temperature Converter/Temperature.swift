@@ -8,8 +8,22 @@
 import Foundation
 
 struct Temperature {
-    var tempInFahrenheit: Double
-    var tempInCelsius: Double
+    var tempInFahrenheit: Double {
+        didSet {
+            let temp = (tempInFahrenheit - 32) * (5.0/9)
+            if (tempInCelsius != temp) {
+                tempInCelsius = temp
+            }
+        }
+    }
+    var tempInCelsius: Double {
+        didSet {
+            let temp = (tempInCelsius - 32) * (5.0/9)
+            if (tempInFahrenheit != temp) {
+                tempInFahrenheit = temp
+            }
+        }
+    }
     
     init(tempInFahrenheit: Double) {
         self.tempInFahrenheit = tempInFahrenheit
