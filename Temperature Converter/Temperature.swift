@@ -18,7 +18,7 @@ struct Temperature {
     }
     var tempInCelsius: Double {
         didSet {
-            let temp = (tempInCelsius - 32) * (5.0/9)
+            let temp = (tempInCelsius * (9/5.0)) + 32
             if (tempInFahrenheit != temp) {
                 tempInFahrenheit = temp
             }

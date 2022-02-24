@@ -28,12 +28,12 @@ class ViewController: UIViewController {
     
     @IBAction func updateTemp(_ sender: Any) {
         if (!switchTemp.isOn) {
-            let variableC = Double(getTemp.text!)
-            temp!.tempInCelsius = variableC!
-        }
-        else {
             let variableF = Double(getTemp.text!)
             temp!.tempInFahrenheit = variableF!
+        }
+        else {
+            let variableC = Double(getTemp.text!)
+            temp!.tempInCelsius = variableC!
         }
         changeTemp()
     }
