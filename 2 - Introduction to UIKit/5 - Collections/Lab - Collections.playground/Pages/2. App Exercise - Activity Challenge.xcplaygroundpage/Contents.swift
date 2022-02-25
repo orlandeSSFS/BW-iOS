@@ -21,6 +21,9 @@ var activeChallenges: [String]
 if (activeChallenges.isEmpty) {
     print("Please commit to a challenge")
 }
+else if (activeChallenges.length == 1) {
+    print("The challenge you have chosen is \(activeChallenges[0])")
+}
 
 /*:
 [Previous](@previous)  |  page 2 of 4  |  [Next: Exercise - Dictionaries](@next)
