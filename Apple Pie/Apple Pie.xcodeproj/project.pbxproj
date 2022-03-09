@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6945278B27D92AFB00F8AA16 /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6945278A27D92AFB00F8AA16 /* Words.swift */; };
+		6945278D27D92B2D00F8AA16 /* usa.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6945278C27D92B2D00F8AA16 /* usa.txt */; };
 		CB08F57C27D25C5F00367FF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08F57B27D25C5F00367FF2 /* AppDelegate.swift */; };
 		CB08F57E27D25C5F00367FF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08F57D27D25C5F00367FF2 /* SceneDelegate.swift */; };
 		CB08F58027D25C5F00367FF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08F57F27D25C5F00367FF2 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6945278A27D92AFB00F8AA16 /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
+		6945278C27D92B2D00F8AA16 /* usa.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = usa.txt; sourceTree = "<group>"; };
 		CB08F57827D25C5F00367FF2 /* Apple Pie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Pie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB08F57B27D25C5F00367FF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB08F57D27D25C5F00367FF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,9 +63,11 @@
 		CB08F57A27D25C5F00367FF2 /* Apple Pie */ = {
 			isa = PBXGroup;
 			children = (
+				6945278C27D92B2D00F8AA16 /* usa.txt */,
 				CB08F57B27D25C5F00367FF2 /* AppDelegate.swift */,
 				CB08F57D27D25C5F00367FF2 /* SceneDelegate.swift */,
 				CB08F57F27D25C5F00367FF2 /* ViewController.swift */,
+				6945278A27D92AFB00F8AA16 /* Words.swift */,
 				CB08F58127D25C5F00367FF2 /* Main.storyboard */,
 				CB08F58427D25C6200367FF2 /* Assets.xcassets */,
 				CB08F58627D25C6200367FF2 /* LaunchScreen.storyboard */,
@@ -130,6 +136,7 @@
 			files = (
 				CB08F58827D25C6200367FF2 /* LaunchScreen.storyboard in Resources */,
 				CB08F58527D25C6200367FF2 /* Assets.xcassets in Resources */,
+				6945278D27D92B2D00F8AA16 /* usa.txt in Resources */,
 				CB08F58327D25C5F00367FF2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +152,7 @@
 				CB08F57C27D25C5F00367FF2 /* AppDelegate.swift in Sources */,
 				CB08F57E27D25C5F00367FF2 /* SceneDelegate.swift in Sources */,
 				CBE3BD5827D7BD4700D03D67 /* Game.swift in Sources */,
+				6945278B27D92AFB00F8AA16 /* Words.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
