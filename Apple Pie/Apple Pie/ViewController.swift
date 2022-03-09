@@ -9,10 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var treeImageView: UIView!
+
+    @IBOutlet weak var treeImageView: UIImageView!
     @IBOutlet weak var correctWordLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet var letterButtons: [UIButton]!
+    
+    var wordList = Words()
     
     var listOfWords = ["buccaneer", "swift", "glorious", "incandescent", "bug", "program"]
     let incorrectMovesAllowed = 7
@@ -27,7 +30,7 @@ class ViewController: UIViewController {
     }
     
     func newRound() {
-        let newWord = listOfWords.removeFirst()
+        let newWord = wordList.getWord()
         currentGame = Game(word: newWord, incorrectMovesRemaining: incorrectMovesAllowed)
         updateUI()
     }
