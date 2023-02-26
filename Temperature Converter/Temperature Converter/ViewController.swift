@@ -12,6 +12,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var getTemp: UITextField!
     @IBOutlet weak var switchTemp: UISwitch!
     @IBOutlet weak var displayTemp: UILabel!
+    
+    @IBOutlet weak var unitLabel: UILabel!
+    @IBOutlet weak var calculatedLabel: UILabel!
+    
     var temp: Temperature?
     
     override func viewDidLoad() {
@@ -19,10 +23,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         let currentTemp = Double(getTemp.text!)
         if switchTemp.isOn {
-             temp = Temperature(tempInCelsius: currentTemp!)
+            temp = Temperature(tempInCelsius: currentTemp!)
         }
         else {
-             temp = Temperature(tempInFahrenheit: currentTemp!)
+            temp = Temperature(tempInFahrenheit: currentTemp!)
         }
         changeTemp()
     }
@@ -42,9 +46,13 @@ class ViewController: UIViewController {
     func changeTemp() {
         if (!switchTemp.isOn) {
             displayTemp.text = "\(temp!.tempInCelsius)"
+            unitLabel.text = "Fahrenheit"
+            calculatedLabel.text = "Celsius"
         }
         else {
             displayTemp.text = "\(temp!.tempInFahrenheit)"
+            unitLabel.text = "Celsius"
+            calculatedLabel.text = "Fahrenheit"
         }
     }
 }
